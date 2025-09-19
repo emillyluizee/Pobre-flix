@@ -1,0 +1,25 @@
+/* src/components/MovieList.css */
+.movie-list-section {
+  padding: 20px 40px;
+  color: #fff;
+}
+
+.movie-list-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.movie-list-container {
+  display: flex;
+  overflow-x: scroll; /* Ativa a rolagem horizontal */
+  padding-bottom: 20px;
+}
+
+.movie-list-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-list-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
