@@ -1,4 +1,3 @@
-/* src/components/FeaturedMovie.css */
 .featured-movie {
   display: flex;
   align-items: center;
@@ -34,4 +33,30 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Estilos para telas menores (celular) */
+@media (max-width: 768px) {
+  .featured-movie {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .movie-info {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+
+  .movie-cast-image {
+    text-align: center;
+  }
+
+  .movie-cast-image img {
+    max-width: 80%;
+  }
 }

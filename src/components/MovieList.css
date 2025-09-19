@@ -1,4 +1,3 @@
-/* src/components/MovieList.css */
 .movie-list-section {
   padding: 20px 40px;
   color: #fff;
@@ -11,7 +10,7 @@
 
 .movie-list-container {
   display: flex;
-  overflow-x: scroll; /* Ativa a rolagem horizontal */
+  overflow-x: scroll;
   padding-bottom: 20px;
 }
 
@@ -22,4 +21,16 @@
 .movie-list-container::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
+}
+
+/* Estilos para telas menores (celular) */
+@media (max-width: 768px) {
+  .movie-list-section {
+    padding: 10px 20px;
+  }
+
+  .movie-list-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
 }

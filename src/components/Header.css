@@ -1,4 +1,3 @@
-/* src/components/Header.css */
 .header {
   background-color: #000;
   color: #fff;
@@ -17,4 +16,20 @@
   margin-left: 20px;
   cursor: pointer;
   font-size: 20px;
+}
+
+/* Estilos para telas menores (celular) */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .icons .icon {
+    margin-left: 10px;
+    font-size: 16px;
+  }
 }
