@@ -1,62 +1,65 @@
 .featured-movie {
   display: flex;
   align-items: center;
-  padding: 50px 40px;
-  background-color: #111;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background-color: #1a1a1a;
   color: #fff;
+  flex-direction: row; /* Layout padrão para desktop */
 }
 
 .movie-info {
-  flex: 1;
-  margin-right: 50px;
-  max-width: 500px;
+  text-align: left;
+  padding: 20px;
 }
 
 .title {
-  font-size: 4em;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .description {
-  font-size: 1.2em;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 600px;
 }
 
 .movie-cast-image {
-  flex: 1;
-  text-align: right;
+  margin-top: 20px;
 }
 
 .movie-cast-image img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
-/* Estilos para telas menores (celular) */
+/* Media Query para telas menores que 768px (smartphones) */
 @media (max-width: 768px) {
   .featured-movie {
-    flex-direction: column;
+    flex-direction: column; /* Altera para uma coluna no celular */
+    align-items: center; /* Centraliza o conteúdo */
+    text-align: center; /* Centraliza o texto */
     padding: 20px;
   }
-
+  
   .movie-info {
-    margin-right: 0;
-    margin-bottom: 20px;
-    text-align: center;
+    text-align: center; /* Centraliza o texto no celular */
+    padding: 10px;
   }
-
+  
   .title {
-    font-size: 2.5em;
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    max-width: 100%;
   }
 
   .movie-cast-image {
-    text-align: center;
-  }
-
-  .movie-cast-image img {
-    max-width: 80%;
+    margin-top: 10px;
   }
 }

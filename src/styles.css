@@ -128,7 +128,11 @@ body {
     padding: 15px 20px;
   }
   
-  .movie-list-title,
+  .movie-list-title {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
   .search-bar-container,
   .search-screen-container {
     padding: 0 20px;
