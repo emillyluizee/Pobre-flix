@@ -1,11 +1,12 @@
 import React from 'react';
 import MovieCard from './MovieCard.jsx';
+import './SearchList.css';
 
-const MovieList = ({ title, movies }) => {
+const SearchList = ({ title, movies }) => {
   return (
-    <div className="movie-list-container">
-      <h2 className="movie-list-title">{title}</h2>
-      <div className="movie-cards-wrapper">
+    <div className="search-list-container">
+      <h2 className="search-list-title">{title}</h2>
+      <div className="search-cards-grid">
         {movies.map(movie => (
           <div className="movie-card-container" key={movie.id}>
             <MovieCard movie={movie} />
@@ -16,4 +17,4 @@ const MovieList = ({ title, movies }) => {
   );
 };
 
-export default MovieList;
+export default SearchList;

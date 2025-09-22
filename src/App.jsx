@@ -1,14 +1,12 @@
-// src/App.jsx
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import FeaturedMovie from './components/FeaturedMovie.jsx';
 import MovieList from './components/MovieList.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import SearchScreen from './components/SearchScreen.jsx';
-import './App.css';
+import './styles.css';
 
-
+// Substitua 'SUA_CHAVE_AQUI' pela sua chave de API real do TMDB
 const API_KEY = '39157edae74e186e763a6488c397962a'; 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
@@ -102,15 +100,15 @@ const App = () => {
       }));
       setSearchResults(results);
     } catch (error) {
-      console.error("Erro ao buscar filmes por gênero:", error);
-      setSearchResults([]);
+        console.error("Erro ao buscar filmes por gênero:", error);
+        setSearchResults([]);
     }
   };
 
   return (
     <div className="app">
       <Header onSearchClick={goToSearchScreen} onHomeClick={goToHomeScreen} />
-
+      
       {currentScreen === 'home' && (
         <>
           <FeaturedMovie />

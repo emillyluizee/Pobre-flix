@@ -1,0 +1,52 @@
+.search-list-container {
+  padding: 20px 40px;
+  margin-top: 80px;
+}
+
+.search-list-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .search-list-container {
+    padding: 20px;
+    margin-top: 80px;
+  }
+  
+  .search-list-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .search-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+}
+
+/* Estilos para o card do filme */
+.movie-card-container {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card-container:hover {
+  transform: scale(1.05);
+}
+
+.movie-card-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}

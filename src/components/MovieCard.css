@@ -1,5 +1,5 @@
 .movie-card-container {
-  width: 100%;
+  width: 150px; /* Largura padrão para desktop */
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
@@ -13,4 +13,11 @@
   height: auto;
   border-radius: 5px;
   object-fit: cover;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .movie-card-container {
+    width: 100px;
+  }
 }

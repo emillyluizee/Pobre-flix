@@ -1,13 +1,10 @@
-// src/components/MovieCard.jsx
-
 import React from 'react';
-import './MovieCard.css';
 
-const MovieCard = ({ imageUrl, title }) => {
+const MovieCard = ({ movie }) => {
   return (
-    <div className="movie-card">
-      <img src={imageUrl} alt={title} />
-    </div>
+    <>
+      <img src={movie.imageUrl} alt={movie.title} />
+    </>
   );
 };
 

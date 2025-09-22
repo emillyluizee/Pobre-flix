@@ -1,7 +1,4 @@
-// src/components/SearchScreen.jsx
-
 import React from 'react';
-import './SearchScreen.css';
 
 const genres = [
   { id: 10749, name: 'ROMANCE' },
@@ -17,6 +14,7 @@ const genres = [
 const SearchScreen = ({ onGenreClick }) => {
   return (
     <div className="search-screen-container">
+      <h2>Explorar por Gênero</h2>
       <div className="buttons-grid">
         {genres.map((genre) => (
           <button

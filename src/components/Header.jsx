@@ -1,14 +1,12 @@
 import React from 'react';
-import './Header.css';
 
-// Recebe as funções de clique como props
 const Header = ({ onSearchClick, onHomeClick }) => {
   return (
     <header className="header">
-      <div className="logo">Pobre-flix</div>
+      <div className="logo" onClick={onHomeClick}>Pobre-flix</div>
       <div className="icons">
-        <span className="icon" onClick={onSearchClick}>🔍</span>
-        <span className="icon" onClick={onHomeClick}>🏠</span>
+        <i className="fas fa-search icon" onClick={onSearchClick}></i>
+        <i className="fas fa-home icon" onClick={onHomeClick}></i>
       </div>
     </header>
   );

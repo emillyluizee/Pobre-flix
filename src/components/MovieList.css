@@ -10,28 +10,29 @@
   margin-bottom: 15px;
 }
 
-.movie-cards-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  overflow-x: hidden;
-  padding: 0 20px;
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 769px) {
+  .movie-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    overflow-x: hidden;
+    padding: 0 20px;
+  }
 }
 
+/* Estilos para telas pequenas (celular) */
 @media (max-width: 768px) {
   .movie-cards-wrapper {
     display: flex;
     overflow-x: auto;
+    gap: 10px;
+    padding: 0 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  
+
   .movie-cards-wrapper::-webkit-scrollbar {
     display: none;
-  }
-  
-  .movie-cards-wrapper .movie-card-container {
-    width: 120px;
-    flex-shrink: 0;
   }
 }

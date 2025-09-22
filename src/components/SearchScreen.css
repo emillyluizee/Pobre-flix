@@ -1,39 +1,33 @@
 .search-screen-container {
-  display: flex;
-  justify-content: center;
   padding: 20px;
+}
+
+.search-screen-container h2 {
   color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .buttons-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
-  width: 100%;
-  max-width: 500px;
-  margin-top: 20px;
+  justify-content: center;
 }
 
 .genre-button {
   background-color: #333;
   color: #fff;
-  border: 1px solid #444;
-  padding: 15px;
-  font-size: 1.2em;
-  font-weight: bold;
+  border: none;
   border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .genre-button:hover {
   background-color: #555;
-}
-
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  .genre-button {
-    font-size: 1em;
-    padding: 12px;
-  }
 }
