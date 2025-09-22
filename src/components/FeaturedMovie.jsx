@@ -1,3 +1,5 @@
+// src/components/FeaturedMovie.jsx
+
 import React from 'react';
 import './FeaturedMovie.css';
 

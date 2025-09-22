@@ -61,6 +61,11 @@ body {
 }
 
 /* Estilos para as listas de filmes na tela inicial */
+/* src/styles.css */
+
+/* ... (mantenha o seu código atual) ... */
+
+/* Estilos para as listas de filmes na tela inicial */
 .movie-list-container {
   padding: 20px 0;
 }
@@ -69,7 +74,7 @@ body {
   color: #fff;
   font-size: 28px;
   font-weight: bold;
-  padding: 0 40px;
+  padding: 0 40px; /* Este padding é o que alinha as listas */
   margin-bottom: 20px;
 }
 
@@ -77,50 +82,12 @@ body {
   display: flex;
   overflow-x: auto;
   gap: 10px;
-  padding: 0 40px;
+  padding: 0 40px; /* E este padding é o que garante o espaço nas laterais */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-.movie-cards-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.movie-cards-wrapper .movie-card-container {
-  width: 150px;
-  height: 225px;
-  flex-shrink: 0;
-}
-
-/* Estilos para a tela de busca */
-.search-screen-container {
-  padding: 80px 40px 20px;
-  text-align: center;
-}
-
-.buttons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.genre-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 15px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.genre-button:hover {
-  background-color: #555;
-}
+/* ... (mantenha o resto do seu código) ... */
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
@@ -130,7 +97,11 @@ body {
   
   .movie-list-title {
     font-size: 20px;
-    padding: 0 20px;
+    padding: 0 20px; /* Reduz o padding para telas menores */
+  }
+
+  .movie-cards-wrapper {
+    padding: 0 20px; /* Reduz o padding para telas menores */
   }
 
   .search-bar-container,
