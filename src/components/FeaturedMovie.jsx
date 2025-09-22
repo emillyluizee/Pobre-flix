@@ -1,8 +1,7 @@
 import React from 'react';
 import './FeaturedMovie.css';
 // Por segurança, para não depender de um arquivo local, usaremos uma imagem de exemplo.
-// Se você tiver a imagem, substitua o link 'https://placehold.co/1920x500' pelo caminho '../assets/lucifer-cast.jpg'.
-const featuredImageUrl = 'https://placehold.co/1920x500/000000/FFFFFF?text=Filme+em+Destaque'; 
+const featuredImageUrl = 'https://s2.glbimg.com/UBnybHLru0HDEq-_NYxlFWeSbQM=/top/e.glbimg.com/og/ed/f/original/2021/08/04/image_AgxCsTX.png'; 
 
 const FeaturedMovie = () => {
   return (

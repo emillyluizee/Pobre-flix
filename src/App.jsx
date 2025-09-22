@@ -4,6 +4,7 @@ import FeaturedMovie from './components/FeaturedMovie.jsx';
 import MovieList from './components/MovieList.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import SearchScreen from './components/SearchScreen.jsx';
+import SearchList from './components/SearchList.jsx';
 import './styles.css';
 
 // Substitua 'SUA_CHAVE_AQUI' pela sua chave de API real do TMDB
@@ -124,7 +125,7 @@ const App = () => {
         <>
           <SearchBar onSearch={handleSearch} />
           {searchResults.length > 0 ? (
-            <MovieList title={listTitle} movies={searchResults} />
+            <SearchList title={listTitle} movies={searchResults} />
           ) : (
             <SearchScreen onGenreClick={handleGenreSearch} />
           )}

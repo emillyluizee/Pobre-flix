@@ -44,35 +44,6 @@ body {
   color: #a0a0a0;
 }
 
-/* Estilos da tela em destaque (FeaturedMovie) */
-.featured-movie-container {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 0 40px;
-  color: #fff;
-}
-
-.featured-movie-info {
-  width: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.featured-movie-info h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.featured-movie-info p {
-  font-size: 18px;
-}
-
 /* Estilos para a barra de busca */
 .search-bar-container {
   padding: 20px 40px;
@@ -89,7 +60,7 @@ body {
   font-size: 16px;
 }
 
-/* Estilos para as listas de filmes */
+/* Estilos para as listas de filmes na tela inicial */
 .movie-list-container {
   padding: 20px 0;
 }
@@ -102,22 +73,23 @@ body {
   margin-bottom: 20px;
 }
 
-/* Estilos para os cartões de filme */
-.movie-card-container {
-  width: 100%;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+.movie-cards-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 0 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.movie-card-container:hover {
-  transform: scale(1.05);
+.movie-cards-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
-.movie-card-container img {
-  width: 100%;
+.movie-cards-wrapper .movie-card-container {
+  width: 150px;
   height: 225px;
-  border-radius: 5px;
-  object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* Estilos para a tela de busca */
@@ -151,28 +123,7 @@ body {
 }
 
 /* Media Queries para responsividade */
-
-/* Telas de celular (com rolagem horizontal) */
 @media (max-width: 768px) {
-  .movie-cards-wrapper {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 0 20px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  
-  .movie-cards-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .movie-cards-wrapper .movie-card-container {
-    width: 100px;
-    height: 150px;
-    flex-shrink: 0;
-  }
-  
   .header {
     padding: 15px 20px;
   }
@@ -181,29 +132,5 @@ body {
   .search-bar-container,
   .search-screen-container {
     padding: 0 20px;
-  }
-  
-  .featured-movie-container {
-    height: 400px;
-    padding: 0 20px;
-  }
-  
-  .featured-movie-info h1 {
-    font-size: 32px;
-  }
-  
-  .featured-movie-info p {
-    font-size: 14px;
-  }
-}
-
-/* Telas de notebook e desktop (com grade) */
-@media (min-width: 769px) {
-  .movie-cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 0 40px;
-    overflow-x: hidden;
   }
 }

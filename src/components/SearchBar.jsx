@@ -1,25 +1,22 @@
 import React, { useState } from 'react';
-import './SearchBar.css';
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
   const handleInputChange = (event) => {
-    const value = event.target.value;
-    setQuery(value);
-    onSearch(value); // Chama a função de busca no componente pai (App.jsx)
+    const newQuery = event.target.value;
+    setQuery(newQuery);
+    onSearch(newQuery);
   };
 
   return (
     <div className="search-bar-container">
       <input
         type="text"
-        placeholder="Buscar filmes, séries..."
+        placeholder="Pesquisar filmes..."
         value={query}
         onChange={handleInputChange}
-        className="search-input"
       />
-      <span className="search-icon">🔍</span>
     </div>
   );
 };
