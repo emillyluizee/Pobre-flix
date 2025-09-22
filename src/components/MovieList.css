@@ -1,36 +1,37 @@
-.movie-list-section {
-  padding: 20px 40px;
-  color: #fff;
-}
-
-.movie-list-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
 .movie-list-container {
-  display: flex;
-  overflow-x: scroll;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
-.movie-list-container::-webkit-scrollbar {
-  height: 8px;
+.movie-list-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 20px;
+  margin-bottom: 15px;
 }
 
-.movie-list-container::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+.movie-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  overflow-x: hidden;
+  padding: 0 20px;
 }
 
-/* Estilos para telas menores (celular) */
 @media (max-width: 768px) {
-  .movie-list-section {
-    padding: 10px 20px;
+  .movie-cards-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-
-  .movie-list-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+  
+  .movie-cards-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .movie-cards-wrapper .movie-card-container {
+    width: 120px;
+    flex-shrink: 0;
   }
 }

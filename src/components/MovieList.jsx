@@ -1,16 +1,14 @@
-// src/components/MovieList.jsx
-
 import React from 'react';
-import MovieCard from './MovieCard';
 import './MovieList.css';
+import MovieCard from './MovieCard.jsx';
 
 const MovieList = ({ title, movies }) => {
   return (
-    <div className="movie-list-section">
-      <h2>{title}</h2>
-      <div className="movie-list-container">
-        {movies.map((movie, index) => (
-          <MovieCard key={index} imageUrl={movie.imageUrl} title={movie.title} />
+    <div className="movie-list-container">
+      <h2 className="movie-list-title">{title}</h2>
+      <div className="movie-cards-wrapper">
+        {movies.map(movie => (
+          <MovieCard key={movie.id} imageUrl={movie.imageUrl} title={movie.title} />
         ))}
       </div>
     </div>

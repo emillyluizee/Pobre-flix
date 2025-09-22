@@ -1,3 +1,5 @@
+// src/App.jsx
+
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import FeaturedMovie from './components/FeaturedMovie.jsx';
@@ -6,7 +8,7 @@ import SearchBar from './components/SearchBar.jsx';
 import SearchScreen from './components/SearchScreen.jsx';
 import './App.css';
 
-// Substitua 'SUA_CHAVE_AQUI' pela sua chave de API real do TMDB
+
 const API_KEY = '39157edae74e186e763a6488c397962a'; 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
@@ -17,6 +19,7 @@ const App = () => {
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
+  const [listTitle, setListTitle] = useState('');
 
   // Fetch inicial para as listas principais
   useEffect(() => {
@@ -66,6 +69,7 @@ const App = () => {
   const handleSearch = async (query) => {
     if (query.length > 0) {
       setCurrentScreen('search');
+      setListTitle(`Resultados da Busca por "${query}"`);
       try {
         const searchResponse = await fetch(`${API_BASE_URL}/search/movie?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}`);
         const searchData = await searchResponse.json();
@@ -80,6 +84,25 @@ const App = () => {
         setSearchResults([]);
       }
     } else {
+      setSearchResults([]);
+      setListTitle('');
+    }
+  };
+
+  const handleGenreSearch = async (genreId, genreName) => {
+    setCurrentScreen('search');
+    setListTitle(`Filmes de ${genreName}`);
+    try {
+      const response = await fetch(`${API_BASE_URL}/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${genreId}`);
+      const data = await response.json();
+      const results = data.results.map(movie => ({
+        title: movie.title,
+        imageUrl: movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : 'https://placehold.co/500x750/000000/FFFFFF?text=Imagem+nao+disponivel',
+        id: movie.id
+      }));
+      setSearchResults(results);
+    } catch (error) {
+      console.error("Erro ao buscar filmes por gênero:", error);
       setSearchResults([]);
     }
   };
@@ -103,9 +126,9 @@ const App = () => {
         <>
           <SearchBar onSearch={handleSearch} />
           {searchResults.length > 0 ? (
-            <MovieList title="Resultados da Busca" movies={searchResults} />
+            <MovieList title={listTitle} movies={searchResults} />
           ) : (
-            <SearchScreen />
+            <SearchScreen onGenreClick={handleGenreSearch} />
           )}
         </>
       )}

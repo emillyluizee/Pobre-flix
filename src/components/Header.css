@@ -1,35 +1,33 @@
 .header {
-  background-color: #000;
-  color: #fff;
-  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color: #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-.logo {
+.header .logo {
   font-size: 24px;
   font-weight: bold;
 }
 
-.icons .icon {
-  margin-left: 20px;
-  cursor: pointer;
-  font-size: 20px;
+.header .icons {
+  display: flex;
+  gap: 20px;
 }
 
-/* Estilos para telas menores (celular) */
-@media (max-width: 768px) {
-  .header {
-    padding: 10px 20px;
-  }
+.header .icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
 
-  .logo {
-    font-size: 20px;
-  }
-
-  .icons .icon {
-    margin-left: 10px;
-    font-size: 16px;
-  }
+.header .icon:hover {
+  color: #fff;
 }
