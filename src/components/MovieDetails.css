@@ -1,0 +1,96 @@
+.movie-details-container {
+  color: #fff;
+}
+
+.details-header {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.details-header .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.details-info {
+  max-width: 600px;
+}
+
+.details-info h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.overview {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.watch-button {
+  background-color: #e50914;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.watch-button:hover {
+  background-color: #a00712;
+}
+
+.audio-options {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audio-button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.audio-button:hover {
+  background-color: #555;
+}
+
+.seasons-container {
+  padding: 20px 40px;
+}
+
+.seasons-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.season-item {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .details-header .overlay {
+    padding: 20px;
+  }
+  .details-info h1 {
+    font-size: 2rem;
+  }
+  .overview {
+    font-size: 1rem;
+  }
+}
