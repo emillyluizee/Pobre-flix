@@ -1,0 +1,39 @@
+.search-screen-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.buttons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.genre-button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.genre-button:hover {
+  background-color: #555;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  .genre-button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
