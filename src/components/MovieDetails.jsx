@@ -88,7 +88,7 @@ const MovieDetails = () => {
                         <div key={season.number} className="season-item">
                             <h3>{season.name}</h3>
                             {/* Aqui você pode adicionar a lógica para listar os episódios */}
-                            <p>Episódios não disponíveis pela API do TMDB na primeira chamada.</p>
+                            <p></p>
                         </div>
                     ))}
                 </div>
